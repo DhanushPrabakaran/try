@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (user) => {
     const response = await axios.post(
-      "http://localhost:3000/api/auth/signin",
+      "http://localhost:5000/api/auth/login",
       user
     );
     const token = response.data.token;
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (user) => {
     const response = await axios.post(
-      "http://localhost:3000/api/auth/signup",
+      "http://localhost:5000/api/auth/signup",
       user
     );
     const token = response.data.token;
